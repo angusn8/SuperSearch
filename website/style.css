@@ -7,11 +7,11 @@
 /* Variables */
 
 :root {
-  --font: 'Bangers', cursive;
+  --font: "Bangers", cursive;
 
   --color-light: #fff;
   --color-dark: #303030;
-  --color-accent: #F0131E;
+  --color-accent: #f0131e;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -28,7 +28,7 @@ html {
 body {
   background: var(--color-light);
   color: var(--color-dark);
-  font-family: 'Bangers';
+  font-family: "Bangers";
   font-size: var(--fs-body);
   line-height: 1.6;
 }
@@ -49,7 +49,7 @@ body {
 /* Search Bar */
 
 .search-bar {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Hero Search Area */

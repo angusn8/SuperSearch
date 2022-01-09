@@ -1,10 +1,25 @@
 // Selectors
-const searchIcon = document.querySelector(".search-icon");
+const searchInput = document.querySelector(".search-input");
+const searchForm = document.querySelector("#search-form");
 
 // Event Listeners
-searchIcon.addEventListener("click", searchHeroes);
+searchForm.addEventListener("submit", loadHeroes);
 
 // Functions
-function searchHeroes() {
-  console.log("Search conducted");
+async function loadHeroes() {
+  
+  const hero = searchInput.value;
+  
+  if (hero != "") {
+    const url = `https://polar-sierra-18874.herokuapp.com/https://superheroapi.com/api/351214476841314/search/${hero}`;
+    console.log(url);
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data.results);
+    displayHeroes(data.results);
+  }
+}
+
+async function displayHeroes() {
+  
 }
