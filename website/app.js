@@ -1,9 +1,10 @@
 // Selectors
 const searchInput = document.querySelector(".search-input");
-const searchForm = document.querySelector("#search-form");
+const searchBtn = document.querySelector(".search-btn");
+const heroList = document.querySelector(".hero-list");
 
 // Event Listeners
-searchForm.addEventListener("submit", loadHeroes);
+searchBtn.addEventListener("click", loadHeroes);
 
 // Functions
 async function loadHeroes() {
@@ -18,8 +19,21 @@ async function loadHeroes() {
     console.log(data.results);
     displayHeroes(data.results);
   }
+
 }
 
-async function displayHeroes() {
-  
+function displayHeroes(heroes) {
+
+  const htmlString = heroes.map((hero) => {
+    return `
+      <li class="hero col-sm-3">
+        <img src="${hero.image.url}" class="hero-img">
+        <h2>${hero.name}</h2>
+        <h4>${hero.biography['full-name']}</h4>
+      </li>
+    `;
+  }).join();
+
+  heroList.innerHTML = htmlString;
+
 }
