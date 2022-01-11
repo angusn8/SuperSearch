@@ -13,7 +13,7 @@
   --color-dark: #303030;
   --color-accent: #f0131e;
 
-  --fs-h1: 3rem;
+  --fs-h1: 4rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
@@ -40,16 +40,42 @@ body {
   text-align: center;
   padding: 2.5rem 0rem;
   margin-bottom: 2rem;
+  background: url("assets/city.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #main-heading {
   font-size: var(--fs-h1);
+  color: white;
+  text-shadow: -3px -3px 0 var(--color-accent), 3px -3px 0 var(--color-accent),
+    -3px 3px 0 var(--color-accent), 3px 3px 0 var(--color-accent);
 }
 
 /* Search Bar */
 
 .search-bar {
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
 }
 
 /* Hero Search Area */
+
+.hero-list {
+  list-style: none;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: 300px;
+}
+
+.hero-subtext {
+}
