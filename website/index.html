@@ -29,14 +29,14 @@
         <h1 id="main-heading">SuperSearch</h1>
       </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row search-bar d-flex justify-content-center">
-        <div class="col-sm-6">
+        <div class="col-sm-6 d-flex justify-content-center align-items-center">
           <form id="search-form">
             <div class="input-group rounded">
               <input
                 type="search"
-                class="form-control search-input rounded"
+                class="form-control search-input rounded shadow-none"
                 placeholder="Find a Hero/Villain"
               />
               <button type="button" class="search-btn input-group-text">
@@ -47,8 +47,32 @@
         </div>
       </div>
     </div>
-    <div class="container px-6">
-      <ul class="hero-list row gx-8"></ul>
+    <div class="container hero-container">
+      <ul class="hero-list row">
+        <li class="col-12">
+          <article class="comic">
+            <div class="panel">
+              <p class="text top-left">Suddenly...</p>
+              <p class="text bottom-right">...you could search heroes!</p>
+            </div>
+            <div class="panel">
+              <p class="text top-left">Just type...</p>
+              <p class="text bottom-right">...and see your hero!</p>
+            </div>
+            <div class="panel">
+              <p class="speech">See their info!</p>
+            </div>
+            <div class="panel"></div>
+            <div class="panel"></div>
+            <div class="panel"></div>
+            <div class="panel"></div>
+            <div class="panel"></div>
+            <div class="panel">
+              <p class="text bottom-right">THE END</p>
+            </div>
+          </article>
+        </li>
+      </ul>
     </div>
     <script src="./app.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
