@@ -28,11 +28,13 @@ function displayHeroes(heroes) {
 
   const htmlString = heroes.map((hero) => {
     return `
-      <li class="hero col-md-4">
-        <img src="${hero.image.url}" class="hero-img">
-        <h2>${hero.name}</h2>
-        <h4 class="hero-subtext">Full Name: ${hero.biography['full-name']}</h4>
-        <h4 class="hero-subtext">Publisher: ${hero.biography['publisher']}</h4>
+      <li class="hero card" style="width: 18rem">
+        <img src="${hero.image.url}" class="hero-img card-img-top">
+        <div class="card-body"
+          <h2 class="card-title">${hero.name}</h2>
+          <h4 class="hero-subtext card-text">Full Name: ${hero.biography['full-name']}</h4>
+          <h4 class="hero-subtext card-text">Publisher: ${hero.biography['publisher']}</h4>
+        </div>
       </li>
     `;
   }).join("");

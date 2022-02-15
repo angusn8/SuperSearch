@@ -103,7 +103,13 @@ input:focus {
 }
 
 .hero-subtext {
-  font-family: cursive;
+  font-family: Georgia, "Times New Roman";
+  font-size: var(--fs-body);
+}
+
+.card {
+  margin: 1rem;
+  border: 2px solid var(--color-accent);
 }
 
 /* Comic Page */
